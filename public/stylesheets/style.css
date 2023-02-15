@@ -28,11 +28,54 @@ main {
   width: min(1200px, 100%);
 }
 
+.message-wrapper {
+  margin-bottom: 16px;
+}
+
 .message {
   border: 1px solid black;
   padding: 10px;
   border-radius: 5px;
+  position: relative;
   margin-bottom: 10px;
+  background-color: #fff;
+}
+
+.message::before {
+  content: ' ';
+  display: block;
+  width: 18px;
+  height: 18px;
+  background: #fff;
+  position: absolute;
+  transform: rotate(45deg);
+  z-index: 1;
+  bottom: -8px;
+  left: 12px;
+  border-radius: 0 0 5px 0;
+}
+
+.message::after {
+  content: ' ';
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #000;
+  position: absolute;
+  transform: rotate(45deg);
+  z-index: -1;
+  bottom: -8px;
+  left: 10px;
+  border-radius: 5px;
+}
+
+.message-author {
+  display: flex;
+  flex-direction: column;
+}
+
+small {
+  font-size: 0.7rem;
 }
 
 input,
