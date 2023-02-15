@@ -14,7 +14,10 @@
     <div class="message">
       <h2><%= message.text %></h2>
       <p><%= message.user %></p>
-      <small><%= message.added %></small>
+      <small>
+        <%= message.added.toLocaleDateString() %> - <%=
+        message.added.toLocaleTimeString() %>
+      </small>
     </div>
     <% }) %>
   </body>
