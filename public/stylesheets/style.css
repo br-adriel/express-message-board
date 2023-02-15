@@ -1,10 +1,21 @@
-body {
-  padding: 50px;
-  font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
+:root {
+  font-size: 16px;
 }
 
-a {
-  color: #00b7ff;
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 10px;
+  font: 1rem 'Lucida Grande', Helvetica, Arial, sans-serif;
+  min-height: 100vh;
+}
+
+header,
+main,
+footer {
+  width: 100%;
 }
 
 .message {
@@ -12,4 +23,39 @@ a {
   padding: 10px;
   border-radius: 5px;
   margin-bottom: 10px;
+}
+
+input,
+textarea,
+button {
+  font-size: 1rem;
+}
+
+textarea,
+input {
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 8px;
+  outline: none;
+  transition: 0.3s ease-out outline;
+}
+
+textarea:focus,
+input:focus {
+  outline: 1px solid #444;
+}
+
+button {
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #222;
+  color: white;
+  transition: 0.3s ease-out background;
+}
+
+button:hover {
+  background-color: #444;
 }
